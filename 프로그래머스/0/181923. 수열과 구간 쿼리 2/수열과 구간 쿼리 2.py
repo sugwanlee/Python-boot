@@ -1,11 +1,11 @@
 def solution(arr, queries):
     answer = []
     for i in queries:
-        for b in arr:
-            if (arr[i[0]] <= b) and (arr[i[1]] >= b) and (arr[i[2]] < b):
+        a = sorted(arr[i[0]:i[1]+1])
+        for b in a:
+            if b > i[2]:
                 answer.append(b)
                 break
-            elif b == arr[len(arr)-1]:
+            elif b == a[-1]:
                 answer.append(-1)
-                break
     return answer
