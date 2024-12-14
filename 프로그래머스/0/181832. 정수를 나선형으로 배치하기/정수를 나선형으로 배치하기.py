@@ -4,13 +4,13 @@ def solution(n):
     for i in range(n) :
         answer.append([0]*n)
     if n == 1:
-        answer = [[1]]
+        return [[1]]
     
     x = 0
     y = 0
     dir = 'r'
     for i in range(1,n**2+1):
-        if (dir == 'r') and answer[x][y] == 0:
+        if (dir == 'r'):
             answer[x][y] = i
             y +=1
             if answer[x][y] != 0:
@@ -21,7 +21,7 @@ def solution(n):
                 dir = 'd'
             
                 
-        elif (dir == 'd') and answer[x][y] == 0:
+        elif (dir == 'd'):
             answer[x][y] = i
             x +=1
             if answer[x][y] != 0:
@@ -30,7 +30,7 @@ def solution(n):
                 dir = 'l'    
             elif x == (n-1):
                 dir = 'l'
-        elif (dir == 'l') and answer[x][y] == 0:
+        elif (dir == 'l'):
             answer[x][y] = i
             y -=1
             if answer[x][y] != 0:
@@ -39,7 +39,7 @@ def solution(n):
                 x -= 1
             elif y == 0:
                 dir = 'u'
-        elif (dir == 'u') and answer[x][y] == 0:
+        elif (dir == 'u'):
             answer[x][y] = i
             x -=1
             if answer[x][y] != 0:
