@@ -1,10 +1,12 @@
 def solution(n):
     answer = []
+    
 
-    for i in range(n) :
-        answer.append([0]*n)
     if n == 1:
         return [[1]]
+    
+    for i in range(n) :
+        answer.append([0]*n)
     
     x = 0
     y = 0
