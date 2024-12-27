@@ -2,7 +2,7 @@ def solution(date1, date2):
     answer = 0
     if date1[0] < date2[0]:
         answer = 1
-    if date1[0] > date2[0]:
+    elif date1[0] > date2[0]:
         answer = 0
     else:
         if date1[1] < date2[1]:
