@@ -1,7 +1,7 @@
 def solution(intStrs, k, s, l):
     answer = []
     for i in intStrs:
-        d = int(i[s:(s+l)])
-        if d > k:
-            answer.append(d)
+        num = int(i[s:(s+l)])
+        if num > k:
+            answer.append(num)
     return answer
