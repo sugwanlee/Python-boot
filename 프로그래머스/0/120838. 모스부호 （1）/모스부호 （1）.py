@@ -9,4 +9,4 @@ def solution(letter):
     answer = ''
     for i in letter.split(" "):
         answer += morse.get(i)
-    return answer
+    return ''.join(morse.get(i) for i in letter.split(" "))
