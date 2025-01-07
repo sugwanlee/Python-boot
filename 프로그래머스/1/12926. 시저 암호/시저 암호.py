@@ -12,4 +12,6 @@ def solution(s, n):
         else:
             answer.append(32)
     answer = ''.join(map(chr,answer))
+    # aski_num = list(map(lambda x : ord(x)+n, aski))
+    
     return answer
