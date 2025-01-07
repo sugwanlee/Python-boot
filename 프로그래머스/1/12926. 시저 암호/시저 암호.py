@@ -1,7 +1,7 @@
 def solution(s, n):
     aski = list(s)
     aski = list(map(lambda x : ord(x), aski))
-    b = list(range(65,91)) + list(range(65,91))
+    b = list(range(65,91)) + list(range(65,91)) + list(range(65,91))*(n//25)
     c = list(range(97,123)) + list(range(97,123))
     answer = []
     for i in aski:
