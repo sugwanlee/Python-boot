@@ -1,11 +1,13 @@
 def solution(arr, queries):
     answer = []
-    for i in queries:
-        a = sorted(arr[i[0]:i[1]+1])
-        for b in a:
-            if b > i[2]:
-                answer.append(b)
-                break
-            elif b == a[-1]:
-                answer.append(-1)
+    a = []
+    for s, e, k in queries:
+        for i, j in enumerate(arr):
+            if (i >= s) and (i <= e) and (j > k):
+                a.append(j)
+        if a != []:
+            answer.append(min(a))
+            a = []
+        else:
+            answer.append(-1)
     return answer
