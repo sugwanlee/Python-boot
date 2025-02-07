@@ -1,8 +1,5 @@
 def solution(n_str):
-    answer = ''
-    for i in n_str:
-        if i == '0':
-            n_str = n_str.replace('0','',1)
-        else:
-            break        
-    return n_str
+    for i in range(len(n_str)):
+        if n_str[i] != "0":
+            return n_str[i:]
+        
