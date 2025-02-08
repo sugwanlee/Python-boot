@@ -1,16 +1,9 @@
 def solution(arr, n):
-    answer = []
     if (len(arr) % 2) == 1:
-        for i, j in enumerate(arr):
-            if (i % 2) == 0:
-                answer.append(j+n)
-            else:
-                answer.append(j)
-    else:
-        for i, j in enumerate(arr):
-            if (i % 2) == 1:
-                answer.append(j+n)
-            else:
-                answer.append(j)
+        for i in range(0,len(arr),2):
+            arr[i] += n
+    elif (len(arr) % 2) == 0:
+        for i in range(1,len(arr),2):
+            arr[i] += n
                 
-    return answer
+    return arr
