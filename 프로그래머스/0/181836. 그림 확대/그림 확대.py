@@ -1,10 +1,5 @@
 def solution(picture, k):
     answer = []
     for i in picture:
-        a = ''
-        for j in i:
-            a += j * k
-        for b in range(k):
-            answer.append(a)
-        
+        answer += [i.replace(".", "." * k).replace("x", "x" * k)] * k
     return answer
