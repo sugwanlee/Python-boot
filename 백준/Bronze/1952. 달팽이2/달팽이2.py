@@ -25,10 +25,7 @@ while True:
             d[nx][ny] = 1
             x, y = nx, ny
             continue
-        else:
-            turn_right()
-    else:
-        turn_right()
+    turn_right()
     nx = x+dx[derection]
     ny = y+dy[derection]
     if d[nx][ny] == 1:
