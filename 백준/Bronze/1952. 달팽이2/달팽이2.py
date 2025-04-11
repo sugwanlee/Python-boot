@@ -24,20 +24,16 @@ while True:
         if d[nx][ny] == 0:
             d[nx][ny] = 1
             x, y = nx, ny
+            continue
         else:
             turn_right()
-            nx = x+dx[derection]
-            ny = y+dy[derection]
-            if d[nx][ny] == 1:
-                count -= 1
-                break
     else:
         turn_right()
-        nx = x+dx[derection]
-        ny = y+dy[derection]
-        if d[nx][ny] == 1:
-            count -= 1
-            break
+    nx = x+dx[derection]
+    ny = y+dy[derection]
+    if d[nx][ny] == 1:
+        count -= 1
+        break
             
 if n == 1:
     count = 0        
