@@ -28,8 +28,5 @@ while queue:
         if graph[nx][ny] == 0:
             graph[nx][ny] = virus
             queue.append((virus, time+1, nx, ny))
-            if nx == x - 1 and ny == y - 1:
-                print(graph[x-1][y-1])
-                exit()
 
 print(graph[x-1][y-1])
